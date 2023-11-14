@@ -1,99 +1,229 @@
 *{
-	padding: 0;
-	margin: 0;
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	outline: none;
 }
+
 body{
 	display: flex;
-	align-items: center;
 	justify-content: center;
-	overflow: hidden;
-	min-height: 100vh;
+	align-items: center;
+	height: 100vh;
 	background: #000;
+	background-position-x: center;
 }
-.container{
-	height: 350px;
-	width: 350px;
-	/* background: pink; */
+
+.mainbox{
 	position: relative;
-	border-radius: 50%;
-  border: solid white 10px;
-	overflow: hidden;
-	transition: 3s all;
+width: 500px;
+height: 500px;
+margin-top: 50px;
 }
-.container div{
-	height: 50%;
-	width: 190px;
-	clip-path: polygon(100% 0,50% 100%, 0 0);
-	transform: translateX(-50%);
-	transform-origin: bottom;
+
+/* .mainbox:after{
+	content: '';
 	position: absolute;
-	left: 21%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-size: 14px;
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight: 500;
-	color:white; 
-	writing-mode: vertical-lr;
+	top: 48%;
+	left: 5%;
+	width: 100%;
+	height: 100%;
+	background: url() no-repeat;
+	background-size: 5%;
+	transform: rotate(90deg);
+} */
+
+.box{
+	width: 100%;
+	height: 100%;
+	position: relative
+	border: 10px solid white;
+	border-radius: 50%;
+	overflow: hidden;
+	transition: all ease-in-out 5s;
+	transform: rotate(90deg);
 }
-.container .one{
-	background: #8BC349;
-	transform: rotate(270deg);
-	/* clip-path: polygon(100% 0,5% 100%0, -5% -5%); */
+
+span{
+position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	display: inline-block;
 }
-.container .two{
-	background: #FF9800;
-	transform: rotate(320deg);
-	/* clip-path: polygon(100% 0,50% 100%, -10% -10%); */
+
+.span1{
+	clip-path: polygon(0 17%, 0 50%, 50% 50%);
+	background-color: #8BC349;
 }
-.container .three{
-	background: #F44336;
-	transform: rotate(20deg);
-	/* clip-path: polygon(100% 0,50% 100%, -20% -20%); */
+
+.span2{
+	clip-path: polygon(0% 17%, 30% 0%, 50% 50%);
+	background-color: #FF9800;
 }
-.container .four{
-	background: #9B27B0;
-	transform: rotate(80deg);
-	/* clip-path: polygon(100% 0,50% 100%, 0% 0%); */
+
+.span3{
+	clip-path: polygon(30% 0%, 71% 0%, 50% 50%);
+	background-color: #F44336;
 }
-.container .five{
-	background: #3E51B5;
-	transform: rotate(120deg);
-	/* clip-path: polygon(100% 0%,50% 100%, -20% -20%); */
+
+.span4{
+	clip-path: polygon(71% 0%, 100% 18%, 50% 50%);
+	background-color: #9B27B0;
 }
-.container .six{
-	background: #01A9F4;
+
+.span5{
+	clip-path: polygon(100% 18%, 100% 50%, 50% 50%);
+	background-color: #3E51B5;
+}
+
+.box2 .span3{
+	background-color: #01A9F4;
+}
+
+.box2{
+	width: 100%;
+	height: 100%;
 	transform: rotate(180deg);
-	/* clip-path: polygon(100% 0,50% 100%, -15% -10%); */
+}
+
+.box2 .span1{
+	background-color: #009588;
 
 }
-.container .seven{
-	background: #009588;
-	transform: rotate(220deg);
-	/* clip-path: polygon(100% 0,50% 100%, -15% -15%); */
+
+.font{
+	color: #fff;
+	font-size: 20px;
 }
-.mid{
+
+.box1 .span1 h5{
 	position: absolute;
+	top: 40%;
+	right: 63%;
+	transform: rotate(200deg);
+	text-align: center;
+
 }
-#spin{
-	height: 50px;
-	width: 300px;
-	background: white;
+
+.box1 .span2 h5{
 	position: absolute;
-	margin-top: 450px;
-	font-size: medium;
-  font-weight: 600;
-	color: black;
-	letter-spacing: 2px;
-	border-radius: 8px;
-	cursor: pointer;
+	top: 30%;
+	right: 57%;
+	transform: rotate(130deg);
+	text-align: center;
+
 }
-#spin:hover{
-	box-shadow: none;
+
+.box1 .span3 h5{
+	position: absolute;
+	top: 22%;
+	right: 38%;
+	transform: rotate(-90deg);
+	text-align: center;
+
 }
-.h1 {
-  color: white;
-  font-size: large;
+
+.box1 .span4 h5{
+	position: absolute;
+	top: 25%;
+	right: 16%;
+	transform: rotate(-45deg);
+	text-align: center;
+
+}
+
+.box1 .span5 h5{
+	position: absolute;
+	top: 40%;
+	right: 6%;
+	transform: rotate(-15deg);
+	text-align: center;
+
+}
+
+.box2 .span1 h5{
+	position: absolute;
+	top: 34%;
+	right: 70%;
+	transform: rotate(200deg);
+	text-align: center;
+
+}
+
+.box2 .span2 h5{
+	position: absolute;
+	top: 28%;
+	right: 54%;
+	transform: rotate(-130deg);
+	text-align: center;
+
+}
+
+.box2 .span3 h5{
+	position: absolute;
+	top: 15%;
+	right: 40%;
+	transform: rotate(270deg);
+	text-align: center;
+
+}
+
+.box2 .span4 h5{
+	position: absolute;
+	top: 15%;
+	right: 25%;
+	transform: rotate(310deg);
+	text-align: center;
+
+}
+
+.box2 .span5 h5{
+	position: absolute;
+	top: 38%;
+	right: 6%;
+	transform: rotate(-20deg);
+	text-align: center;
+
+}
+
+.spin{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1000;
+}
+
+/* .spin:active{
+	width: 70px;
+	height: 70px;
+	font-size: 20px;
+} */
+
+.mainbox.animate:after{
+	animation:animateArrow 0.7s ease infinite;
+}
+
+/* audio {
+	display: none;
+} */
+
+/* @keyframes animateArrow{
+	50%{
+		right: -50px;
+	}
+} */
+
+.button{
+width: 290px;
+height: 30px;
+border-radius: 8px;
+background: #FFF;
+display: flex;
+padding: 16px;
+justify-content: center;
+align-items: center;
+color: #000;
+cursor: pointer;
 }
